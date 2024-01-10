@@ -1,4 +1,3 @@
-// Post.js (Modèle MongoDB avec Mongoose)
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({

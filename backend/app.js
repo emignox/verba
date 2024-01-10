@@ -1,21 +1,16 @@
-// app.js ou index.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const UserController = require('./controllers/UserController'); // ou le chemin correct vers ton contrôleur
-
+const connectDb = require('./dbConnexion');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware pour analyser le corps des requêtes en JSON
 app.use(bodyParser.json());
 
-// Connexion à MongoDB
-mongoose.connect('<URL_DE_CONNEXION>', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
+//connexion MongoDb :
+connectDb();
 // Gestion des routes
 app.post('/api/register', UserController.registerUser);
 app.post('/api/sendFriendRequest/:userId/:friendId', UserController.sendFriendRequest);

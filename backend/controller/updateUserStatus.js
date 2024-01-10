@@ -19,8 +19,6 @@ const userService = {
 
     return response.json();
   },
-
-  // ...
 };
 
 export default userService;

@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
+  _id: { type: String, required: true },
   name: { type: String, required: true },
   email: { type: String, unique: true, required: true },
   year: { type: Number, required: true },
@@ -10,7 +11,8 @@ const userSchema = new mongoose.Schema({
   biography: { type: String },
   friends: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   status: {type: Boolean, default: true},
-});
+  inscription: { type: Date, default: Date.now },
+}, { timestamps: true });
 
 // Hashage du mot de passe avant de sauvegarder l'utilisateur
 userSchema.pre('save', async function (next) {
