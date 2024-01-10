@@ -1,11 +1,13 @@
-import img from "../img/iconePlus.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
 function plus() {
   return (
     <>
       <Link to="/add">
         <div>
-          <img src={img} alt="iconePlus" className="lg:w-20 lg:h-20" />
+          <FontAwesomeIcon className="text-white  text-2xl" icon={faPlus} />
         </div>
       </Link>
     </>

@@ -2,7 +2,7 @@ import Logo from "../img/v1.png";
 
 function logo() {
   return (
-    <div className=" w-12 ">
+    <div className=" lg:w-12  w-10 ">
       <img src={Logo} alt="" />
     </div>
   );
