@@ -1,8 +1,11 @@
+import { BrowserRouter as Router } from "react-router-dom";
+import Nav from "./component/navbar";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <Router>
+      <Nav />
+    </Router>
   );
 }
 
