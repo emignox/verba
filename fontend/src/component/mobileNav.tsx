@@ -17,7 +17,7 @@ function MobileNav() {
         <img
           src="https://img.freepik.com/free-photo/beautiful-shot-famous-roman-colosseum-amphitheater-breathtaking-sky-sunrise_181624-6998.jpg?w=1800&t=st=1704895897~exp=1704896497~hmac=96cfeaf9f699ac2bbceda1e3de6e5f3894c9706e50c503f733e6138d797d5b6b"
           alt="Small"
-          className="w-5 h-5 rounded-full"
+          className="w-7 h-7 rounded-full"
         />
       </button>
     </div>
