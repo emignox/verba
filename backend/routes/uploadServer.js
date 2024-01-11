@@ -15,6 +15,13 @@ const storage = multer.diskStorage({
   },
 });
 
+const pictureType = {
+  'image/jgp': 'jpg',
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'image/gif': 'gif',
+};
+
 const upload = multer({ storage: storage });
 
 // Endpoint pour le téléchargement de l'image

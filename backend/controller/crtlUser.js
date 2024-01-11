@@ -1,5 +1,5 @@
 // Supposons que tu as un service utilisateur avec une méthode updateUserStatus
-const userService = require('../services/userService');
+const userService = require('./updateUserStatus');
 
 
 // Mise à jour du statut de l'utilisateur (désactivation)
