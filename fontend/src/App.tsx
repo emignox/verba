@@ -1,10 +1,13 @@
 import Post from "./component/post";
 import FriendsList from "./component/friendsList";
+import Settings from "./component/settings";
 
 const friendsData = [
-  { id: 1, name: 'Nicolas' },
-  { id: 2, name: 'Ema' },
-  { id: 3, name: 'Cédric' },
+  { id: 1, name: 'Nicolas', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 2, name: 'Ema', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 3, name: 'Cédric', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 4, name: 'Tim', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 5, name: 'Louise', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
 ];
 
 const postData = {
@@ -17,8 +20,10 @@ function App() {
 
   return (
     <>
-      <Post {...postData} />
-      <FriendsList friends={friendsData} />
+      {/*<Post {...postData} /> */}
+      {/*<FriendsList friends={friendsData} /> */}
+      
+      <Settings />
     </>
   );
 }
