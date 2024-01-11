@@ -4,7 +4,7 @@ import image from "../img/profil.jpg";
 
 const Settings: React.FC = () => {
     const [profileImageUrl, setProfileImageUrl] = useState<string>(image);
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState('test@email.com');
     const [name, setName] = useState('Nom');;
     const [bio, setBio] = useState('');
     const [password, setPassword] = useState('');
@@ -16,12 +16,12 @@ const Settings: React.FC = () => {
             setProfileImageUrl(URL.createObjectURL(e.target.files[0]));
         }
     };
-
-    
-
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value);
-      };
+    };
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
+    };
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -40,7 +40,7 @@ const Settings: React.FC = () => {
                         <textarea value={bio} onChange={(e) => setBio(e.target.value)} className="border p-2" placeholder="Bio" />
                     </div>
                     <div className="flex flex-col items-center">
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="border p-2" placeholder="Email" />
+                        <input type="email" value={email} onChange={handleEmailChange} className="border p-2" placeholder="Email" />
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border p-2" placeholder="Mot de passe" />
                         <input type="password" className="border p-2" placeholder="Réinitialiser le mot de passe" />
                     </div>
