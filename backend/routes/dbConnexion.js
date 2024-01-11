@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 module.exports = async function () {
     try {
-        await mongoose.connect('mongodb+srv://verba:beCode1234@verba.jtevtpc.mongodb.net/', {
+        await mongoose.connect('<connectDB>', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
