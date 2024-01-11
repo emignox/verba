@@ -18,12 +18,12 @@ function Bar() {
         alt=""
       />
       <div
-        className={`absolute top-0 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-0 lg:mr-5 lg:transform-none lg:flex justify-end items-end ${
+        className={`absolute top-0 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-0 lg:mr-5 lg:transform-none ${
           isSearchVisible ? "show" : "hide"
         }`}
       >
         <input
-          className="h-7 mx-5 rounded-lg mt-5 text-white"
+          className="h-7 mx-5 rounded-lg mt-5 text-white lg:flex lg:items-end"
           style={{ backgroundColor: "#494949" }}
           type="text"
           placeholder=" Search..."

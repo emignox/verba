@@ -22,7 +22,7 @@ function Nav() {
         >
           {isOpen ? "x" : "☰"}
         </button>
-        <div className="">
+        <div className=" lg:block">
           <Logo1 />
         </div>
         <Search />
