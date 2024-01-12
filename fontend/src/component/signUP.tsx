@@ -23,7 +23,7 @@ function signUp() {
           <div>
             <FormSign />
             <div className=" flex justify-center">
-              <button className="mt-28 transition-colors duration-500 ease-in-out  hover:bg-slate-900 rounded-md">
+              <button className=" transition-colors duration-500 ease-in-out  hover:bg-slate-900 rounded-md">
                 <img
                   className=" w-20  mx-auto   lg:w-20  lg:mx-auto "
                   src={Sign}

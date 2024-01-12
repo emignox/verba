@@ -23,7 +23,7 @@ function Bar() {
         }`}
       >
         <input
-          className="h-7 mx-5 rounded-lg mt-5 text-white lg:flex lg:items-end"
+          className="h-7  mx-5 rounded-lg mt-5 text-white lg:flex lg:items-end xl:w-32 xl:h-5 xl:mt-8"
           style={{ backgroundColor: "#494949" }}
           type="text"
           placeholder=" Search..."

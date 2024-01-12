@@ -1,9 +1,10 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Sign from "./component/signUP";
+// import Sign from "./component/signUP";
 // import Home from "./pages/home";
 // import Post from "./component/post";
 // import FriendsList from "./component/friendsList";
 //import Settings from "./component/settings";
+import UserData from "./component/userData";
 
 // const friendsData = [
 //   { id: 1, name: 'Nicolas', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
@@ -23,7 +24,8 @@ function App() {
   return (
     <div>
       <Router>
-        <Sign />
+        <UserData />
+        {/* <Sign /> */}
         <>{/* <Home /> */}</>
         {/*<Post {...postData} /> */}
         {/*<FriendsList friends={friendsData} /> */}

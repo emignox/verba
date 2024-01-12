@@ -13,7 +13,7 @@ function Plus() {
   return (
     <>
       <button onClick={handleClick}>
-        <FontAwesomeIcon className="text-white  text-2xl" icon={faPlus} />
+        <FontAwesomeIcon className="text-white  text-xl" icon={faPlus} />
       </button>
       {isPopupOpen && <Pop setIsPopupOpen={setIsPopupOpen} />}
     </>
