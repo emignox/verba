@@ -37,7 +37,7 @@ function Nav() {
           <Toggle />
         </section>
       </div>
-      <div className="xl:hidden lg:block block fixed bottom-0 w-full  py-2 mb-0 my-0">
+      <div className="xl:hidden lg:block block fixed bottom-0 w-full  mb-0 my-0">
         <Menu />
       </div>
     </div>

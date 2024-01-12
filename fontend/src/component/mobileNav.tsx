@@ -15,7 +15,10 @@ function MobileNav() {
   };
 
   return (
-    <div className="flex flex-row justify-between">
+    <div
+      className="flex flex-row justify-between   "
+      style={{ backgroundColor: "#1C1C1F" }}
+    >
       {buttonsData.map((button, index) => (
         <button
           key={index}
