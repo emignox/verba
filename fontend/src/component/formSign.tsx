@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Sign from "../img/signUp.png";
 
 function Form() {
   const [form, setForm] = useState({
@@ -10,6 +11,23 @@ function Form() {
     confirmPassword: "",
   });
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:3001/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
       ...form,
@@ -19,7 +37,10 @@ function Form() {
 
   return (
     <div className=" ">
-      <form className=" flex flex-col  justify-centers items-center">
+      <form
+        className=" flex flex-col  justify-centers items-center"
+        onSubmit={handleSubmit}
+      >
         <label className=" xl:my-5 text-white  my-5 ">
           Email:
           <br />
@@ -87,6 +108,18 @@ function Form() {
             onChange={handleChange}
           />
         </label>
+        <div className=" flex justify-center">
+          <button
+            className=" transition-colors duration-500 ease-in-out  hover:bg-slate-900 rounded-md"
+            type="submit"
+          >
+            <img
+              className=" w-20  mx-auto   lg:w-20  lg:mx-auto "
+              src={Sign}
+              alt=""
+            />
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -22,15 +22,6 @@ function signUp() {
           />
           <div>
             <FormSign />
-            <div className=" flex justify-center">
-              <button className=" transition-colors duration-500 ease-in-out  hover:bg-slate-900 rounded-md">
-                <img
-                  className=" w-20  mx-auto   lg:w-20  lg:mx-auto "
-                  src={Sign}
-                  alt=""
-                />
-              </button>
-            </div>
           </div>
         </div>
         <div className=" xl:block lg:hidden hidden xl:w-1/2">
