@@ -7,7 +7,7 @@ export const DeleteButton: React.FC = () => (
 );
 
 export const SaveButton: React.FC = () => (
-    <button className="bg-transparent hover:bg-cyan-300 hover:border-none hover:scale-110 border-2 border-white text-white font-bold py-2 px-4 rounded-lg">
+    <button className="bg-transparent hover:bg-cyan-300 hover:border-transparent hover:scale-110 border-2 border-white text-white font-bold py-2 px-4 rounded-lg">
         SAVE
     </button>
 );

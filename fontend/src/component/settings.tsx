@@ -5,7 +5,7 @@ import image from "../img/profil.jpg";
 const Settings: React.FC = () => {
     const [profileImageUrl, setProfileImageUrl] = useState<string>(image);
     const [email, setEmail] = useState('test@email.com');
-    const [name, setName] = useState('Nom');;
+    const [name, setName] = useState('Nom');
     const [bio, setBio] = useState('Ceci est une BIO');
     const [password, setPassword] = useState('password');
     const [repeatPassword, setRepeatPassword] = useState('password');
@@ -40,75 +40,78 @@ const Settings: React.FC = () => {
     }; 
 
     return (
-        <div className="flex justify-center items-center h-screen">
-            <form className="flex flex-col items-center">
-                <div className="flex flex-col items-center mb-5">
-                    <h1 className="py-5 text-white font-bold text-2xl">SETTINGS</h1>
-                    <SaveButton />
+        <div className="flex flex-col w-screen h-screen lg:flex lg:justify-center lg:items-stretch">
+            <form className="flex flex-col items-center lg:flex lg:flex-col lg:justify-evenly lg:items-center">
+                <div className="flex flex-row justify-between items-center lg:flex lg:flex-col lg:items-center lg:justify-between">
+                    <h1 className="text-white font-bold lg:text-3xl">SETTINGS</h1>
+                    <div className="my-5 lg:my-5">
+                        <SaveButton />
+                    </div>
                 </div>
-                <div className="flex flex-row my-5 py-5">
-                    <div className="flex flex-col items-center mx-5 justify-between">
-                        <h2 className="text-white font-bold">PICTURE</h2>
-                        <div
-                            className="w-56 h-56 rounded-full border-2 border-white"
-                            style={{
-                                backgroundImage: `url(${profileImageUrl})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                            }}
-                        ></div>
-                        <label htmlFor="fileInput" className="border-2 rounded-lg bg-transparent cursor-pointer text-white">
-                            Upload
-                            <input
-                            type="file"
-                            id="fileInput"
-                            onChange={handleImageChange}
-                            className="hidden"
-                            />
-                        </label>
+                <div className="lg:flex lg:flex-row lg:w-screen lg:justify-evenly">
+                    <div className="flex flex-col lg:flex lg:flex-col lg:items-center lg:justify-between">
+                        <h2 className="text-white font-bold my-2">PICTURE</h2>
+                        <div className="flex flex-row items-center justify-around lg:flex lg:flex-col">
+                            <div className="w-24 h-24 lg:m-5 lg:w-56 lg:h-56 rounded-full border-2 border-white"
+                                style={{
+                                    backgroundImage: `url(${profileImageUrl})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                }}
+                            ></div>
+                            <label htmlFor="fileInput" className="border-2 rounded-lg bg-transparent cursor-pointer text-white">
+                                Upload
+                                <input
+                                type="file"
+                                id="fileInput"
+                                onChange={handleImageChange}
+                                className="hidden"
+                                />
+                            </label>
+                        </div>
+
                     </div>
 
-                    <div className="flex flex-col items-center mx-4">
-                        <div className="flex flex-col h-1/3">
+                    <div className="flex flex-col items-center lg:flex lg:flex-col lg:items-center">
+                        <div className="py-3 lg:flex lg:flex-col lg:h-1/3">
                             <h3 className="text-white font-bold">Name</h3>
                             <input type="text" value={name} onChange={(handleNameChange)} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" defaultValue="test"/>
                         </div>
-                        <div className="flex flex-col w-full h-2/3">
+                        <div className="py-3 lg:flex lg:flex-col lg:w-full lg:h-2/3">
                             <h3 className="text-white font-bold">Bio</h3>
-                            <textarea value={bio} onChange={(handleBioChange)} className="h-full border-2 p-2 focus:outline-none bg-transparent text-white rounded-lg" placeholder="Bio" />
+                            <textarea value={bio} onChange={(handleBioChange)} className="lg:h-full border-2 p-2 focus:outline-none bg-transparent text-white rounded-lg" placeholder="Bio" />
                         </div>   
                     </div>
-                    <div className="flex flex-col items-center mx-4">
-                        <div className="flex flex-col h-1/3">
+                    <div className="lg:flex lg:flex-col lg:items-center">
+                        <div className="py-3 lg:flex lg:flex-col lg:h-1/3">
                             <h3 className="text-white font-bold">Email</h3>
                             <input type="email" value={email} onChange={handleEmailChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Email" />
                         </div>
-                        <div className="flex flex-col h-1/3">
+                        <div className="py-3 lg:flex lg:flex-col lg:h-1/3">
                             <h3 className="text-white font-bold">Password</h3>
                             <input type="password" value={password} onChange={handlePasswordChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Mot de passe" />
                         </div> 
-                        <div className="flex flex-col h-1/3">
+                        <div className="py-3 lg:flex lg:flex-col lg:h-1/3">
                             <h3 className="text-white font-bold">Repeat Password</h3>
                             <input type="password" value={repeatPassword} onChange={handleRepeatPasswordChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Réinitialiser le mot de passe" />
                         </div> 
                     </div>
-                    <div className="flex flex-col items-center mx-4">
-                        <div className="flex flex-col h-1/3">
+                    <div className="lg:flex lg:flex-col lg:items-center">
+                        <div className="py-3 lg:flex lg:flex-col lg:h-1/3">
                             <h3 className="text-white font-bold">Country</h3>
-                            <input type="text" value={country} onChange={handleCountryChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Pays" />
+                            <input type="text" value={country} onChange={handleCountryChange} className="border-b-2 p-2 lg:w-2/3 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Pays" />
                         </div>
-                        <div className="flex flex-col h-1/3">
+                        <div className="py-3 lg:flex lg:flex-col lg:h-1/3">
                             <h3 className="text-white font-bold">Âge</h3>
-                            <input type="number" value={age} onChange={handleAgeChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Âge" />
+                            <input type="number" value={age} onChange={handleAgeChange} className="border-b-2 p-2 lg:w-1/3 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Âge" />
                         </div>
-                        <div className="flex h-1/3 items-center">
+                        <div className="flex justify-center py-3 lg:flex lg:h-1/3 lg:items-center">
                             <DeleteButton />
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        
     );
 };
 
