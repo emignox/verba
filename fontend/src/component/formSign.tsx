@@ -35,7 +35,7 @@ function Form() {
           Name:
           <br />
           <input
-            className="lg:w-72 bg-transparent  border-b-2 border-white   rounded-sm  focus:outline-none"
+            className="lg:w-72 bg-transparent  border-b-2 border-white   rounded-sm  focus:outline-none focus:bg-transparent "
             type="text"
             name="name"
             value={form.name}
