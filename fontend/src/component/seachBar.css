@@ -7,3 +7,10 @@
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+
+/* Aggiungi questa media query per sovrascrivere l'opacità su schermi large */
+@media (min-width: 1024px) {
+  .hide {
+    opacity: 1;
+  }
+}

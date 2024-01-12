@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Nav from "./component/navbar";
-
+import Sign from "./component/signUP";
+// import Home from "./pages/home";
 // import Post from "./component/post";
 // import FriendsList from "./component/friendsList";
 //import Settings from "./component/settings";
@@ -23,7 +23,8 @@ function App() {
   return (
     <div>
       <Router>
-        <Nav />
+        <Sign />
+        <>{/* <Home /> */}</>
         {/*<Post {...postData} /> */}
         {/*<FriendsList friends={friendsData} /> */}
       </Router>
