@@ -42,28 +42,68 @@ const Settings: React.FC = () => {
     return (
         <div className="flex justify-center items-center h-screen">
             <form className="flex flex-col items-center">
-                <div className="flex flex-col items-center my-3">
-                    <h1 className="py-3 text-white">SETTINGS</h1>
+                <div className="flex flex-col items-center mb-5">
+                    <h1 className="py-5 text-white font-bold text-2xl">SETTINGS</h1>
                     <SaveButton />
                 </div>
-                <div className="flex flex-row">
-                    <div className="flex flex-col items-center mx-2">
-                        <img src={profileImageUrl} alt="Profile" className="w-20 h-20 object-cover rounded-full" />
-                        <input type="file" onChange={handleImageChange} className="border p-2" />
+                <div className="flex flex-row my-5 py-5">
+                    <div className="flex flex-col items-center mx-5 justify-between">
+                        <h2 className="text-white font-bold">PICTURE</h2>
+                        <div
+                            className="w-56 h-56 rounded-full border-2 border-white"
+                            style={{
+                                backgroundImage: `url(${profileImageUrl})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
+                        ></div>
+                        <label htmlFor="fileInput" className="border-2 rounded-lg bg-transparent cursor-pointer text-white">
+                            Upload
+                            <input
+                            type="file"
+                            id="fileInput"
+                            onChange={handleImageChange}
+                            className="hidden"
+                            />
+                        </label>
                     </div>
-                    <div className="flex flex-col items-center mx-2">
-                        <input type="text" value={name} onChange={(handleNameChange)} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" defaultValue="test"/>
-                        <textarea value={bio} onChange={(handleBioChange)} className="border p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Bio" />
+
+                    <div className="flex flex-col items-center mx-4">
+                        <div className="flex flex-col h-1/3">
+                            <h3 className="text-white font-bold">Name</h3>
+                            <input type="text" value={name} onChange={(handleNameChange)} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" defaultValue="test"/>
+                        </div>
+                        <div className="flex flex-col w-full h-2/3">
+                            <h3 className="text-white font-bold">Bio</h3>
+                            <textarea value={bio} onChange={(handleBioChange)} className="h-full border-2 p-2 focus:outline-none bg-transparent text-white rounded-lg" placeholder="Bio" />
+                        </div>   
                     </div>
-                    <div className="flex flex-col items-center mx-2">
-                        <input type="email" value={email} onChange={handleEmailChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Email" />
-                        <input type="password" value={password} onChange={handlePasswordChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Mot de passe" />
-                        <input type="password" value={repeatPassword} onChange={handleRepeatPasswordChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Réinitialiser le mot de passe" />
+                    <div className="flex flex-col items-center mx-4">
+                        <div className="flex flex-col h-1/3">
+                            <h3 className="text-white font-bold">Email</h3>
+                            <input type="email" value={email} onChange={handleEmailChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Email" />
+                        </div>
+                        <div className="flex flex-col h-1/3">
+                            <h3 className="text-white font-bold">Password</h3>
+                            <input type="password" value={password} onChange={handlePasswordChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Mot de passe" />
+                        </div> 
+                        <div className="flex flex-col h-1/3">
+                            <h3 className="text-white font-bold">Repeat Password</h3>
+                            <input type="password" value={repeatPassword} onChange={handleRepeatPasswordChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Réinitialiser le mot de passe" />
+                        </div> 
                     </div>
-                    <div className="flex flex-col items-center mx-2">
-                        <input type="text" value={country} onChange={handleCountryChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Pays" />
-                        <input type="number" value={age} onChange={handleAgeChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Âge" />
-                        <DeleteButton />
+                    <div className="flex flex-col items-center mx-4">
+                        <div className="flex flex-col h-1/3">
+                            <h3 className="text-white font-bold">Country</h3>
+                            <input type="text" value={country} onChange={handleCountryChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Pays" />
+                        </div>
+                        <div className="flex flex-col h-1/3">
+                            <h3 className="text-white font-bold">Âge</h3>
+                            <input type="number" value={age} onChange={handleAgeChange} className="border-b-2 p-2 focus:outline-none bg-transparent text-white rounded-sm" placeholder="Âge" />
+                        </div>
+                        <div className="flex h-1/3 items-center">
+                            <DeleteButton />
+                        </div>
                     </div>
                 </div>
             </form>
