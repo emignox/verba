@@ -1,18 +1,22 @@
 import { BrowserRouter as Router } from "react-router-dom";
 // import Sign from "./component/signUP";
-// import Post from "./component/post";
-// import FriendsList from "./component/friendsList";
+import Post from "./component/post";
+import FriendsList from "./component/friendsList";
 import Settings from "./component/settings";
 //import Other from "./pages/otherProfile";
+import SearchUser from "./component/searchUser";
 
-// const friendsData = [
-//   { id: 1, name: 'Nicolas', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
-//   { id: 2, name: 'Ema', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
-//   { id: 3, name: 'Cédric', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
-//   { id: 4, name: 'Tim', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
-//   { id: 5, name: 'Louise', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
-// ];
-
+const friendsData = [
+  { id: 1, name: 'Nicolas', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 2, name: 'Ema', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 3, name: 'Cédric', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 4, name: 'Tim', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+  { id: 5, name: 'Louise', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
+];
+const searchData = {
+  Image: "https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg",
+  Name: "Example One",
+}
 const postData = {
   profileImage: "https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg",
   profileName: "Nom du profil",
@@ -24,6 +28,7 @@ function App() {
     <div>
       <Router>
 
+        <SearchUser {...searchData} />
         <Settings/>
         {/*<Nav /> */}
         {/* 
@@ -33,8 +38,8 @@ function App() {
           </div>
         */}
         {/* <Sign /> */}
-        {/*<Post {...postData} /> */}
-        {/*<FriendsList friends={friendsData} /> */}
+        <Post {...postData} />
+        <FriendsList friends={friendsData} />
       </Router>
     </div>
   );
