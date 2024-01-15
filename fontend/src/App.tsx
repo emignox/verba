@@ -23,7 +23,8 @@ function App() {
   return (
     <div>
       <Router>
-        <Settings/>
+        
+        {/*<Settings/> */}
         {/*<Nav /> */}
         {/*<Post {...postData} /> */}
         {/*<FriendsList friends={friendsData} /> */}
