@@ -12,8 +12,8 @@ function UserData() {
         src="https://img.freepik.com/free-photo/gondolas-lagoon-venice-sunrise-italy_268835-1290.jpg?size=626&ext=jpg&ga=GA1.1.1702596433.1693488652&semt=sph"
         alt=""
       />
-      <div className="flex justify-center items-start h-screen w-full mx-0 xl:flex-col xl:items-center">
-        <div className="bg-transparent h-auto w-full flex flex-row  xl:flex-col xl:items-center">
+      <div className="flex justify-center items-start xl:h-auto  w-full mx-0 xl:flex-col xl:items-center ">
+        <div className="bg-transparent h-auto w-full flex flex-row  xl:flex-col xl:items-center ">
           <img
             className="rounded-full  w-16 mx-5 my-5 sm:w-20 md:w-24  sm:hidden md:hidden  hidden xl:block   "
             src="https://img.freepik.com/free-photo/gondolas-lagoon-venice-sunrise-italy_268835-1290.jpg?size=626&ext=jpg&ga=GA1.1.1702596433.1693488652&semt=sph"
