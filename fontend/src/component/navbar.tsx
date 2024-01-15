@@ -18,11 +18,11 @@ function Nav() {
       >
         <button
           onClick={toggleMenu}
-          className="text-white lg:text-3xl lg:mb-2 lg:mx-5 w-10 hidden lg:block"
+          className="text-white lg:text-3xl lg:mb-2 lg:mx-5 w-10 hidden lg:hidden xl:block "
         >
           {isOpen ? "x" : "☰"}
         </button>
-        <div className=" lg:block">
+        <div className=" xl:block">
           <Logo1 />
         </div>
         <Search />
@@ -37,7 +37,7 @@ function Nav() {
           <Toggle />
         </section>
       </div>
-      <div className="lg:hidden block fixed bottom-0 w-full  py-2 mb-0 my-0">
+      <div className="xl:hidden lg:block block fixed bottom-0 w-full  mb-0 my-0">
         <Menu />
       </div>
     </div>

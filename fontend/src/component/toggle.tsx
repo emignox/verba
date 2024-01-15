@@ -7,31 +7,31 @@ import { faCog, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 function toggle() {
   return (
     <div
-      className="lg:flex lg:flex-col lg:w-1/5 lg:items-center "
+      className="xl:flex xl:flex-col lg:w-1/5 lg:items-center   "
       style={{ backgroundColor: "transparent", height: "calc(100vh - 4rem)" }}
     >
       <div className=" ">
         <ProfileImage />
-        <div className=" lg:my-52">
+        <div className=" lg:my-32 xl:flex xl:justify-center xl:mx-auto">
           <Plus />
         </div>
-        <div className="">
+        <div className=" xl:mt-56">
           <Link to="">
-            <h1 className=" lg:text-2xl lg:my-8 text-white">
+            <h1 className=" lg:text-lg xl:my-8 text-white">
               {" "}
               <FontAwesomeIcon
                 icon={faCog}
-                className="lg:text-2xl lg:mx-2 text-white"
+                className="lg:text-lg xl:mx-2 text-white"
               />
               Setting
             </h1>
           </Link>
           <Link to="">
-            <h1 className=" lg:text-2xl  text-white">
+            <h1 className=" xl:text-lg  text-white">
               {" "}
               <FontAwesomeIcon
                 icon={faSignOutAlt}
-                className="lg:text-2xl lg:mx-2 text-white"
+                className="xl:text-lg lg:mx-2 text-white"
               />
               LogOut
             </h1>

@@ -1,9 +1,9 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Nav from "./component/navbar";
-
+// import Sign from "./component/signUP";
 // import Post from "./component/post";
 // import FriendsList from "./component/friendsList";
 import Settings from "./component/settings";
+//import Other from "./pages/otherProfile";
 
 // const friendsData = [
 //   { id: 1, name: 'Nicolas', img: 'https://images.radio-canada.ca/q_auto,w_350/v1/ici-tele/1x1/carre-noir-racisme-systemique-brutalite-policiere.jpg' },
@@ -23,9 +23,16 @@ function App() {
   return (
     <div>
       <Router>
-        
-        {/*<Settings/> */}
+
+        <Settings/>
         {/*<Nav /> */}
+        {/* 
+          <div className=" flex justify-center items-center">
+            {" "}
+            <Other />
+          </div>
+        */}
+        {/* <Sign /> */}
         {/*<Post {...postData} /> */}
         {/*<FriendsList friends={friendsData} /> */}
       </Router>
