@@ -1,0 +1,63 @@
+.logo {
+  width: 80%;
+  margin: auto;
+  display: block;
+  animation:
+    blur 3s ease-out,
+    width 3s ease-out;
+}
+
+.reflection {
+  height: 500px;
+  position: relative;
+  bottom: 350px;
+  z-index: -2;
+  transform: scaleY(-1) perspective(500px) rotateX(-50deg) scaleX(1.2);
+  opacity: 0.3;
+  margin-top: -10px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+@keyframes blur {
+  from {
+    filter: blur(30px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+@keyframes width {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+.fade-out {
+  animation: fade-out 3s;
+  animation-delay: 4s;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* signup.css */
+.fade-in {
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

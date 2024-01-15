@@ -1,16 +1,5 @@
 import { useState } from "react";
 import Sign from "../img/signUp.png";
-import userService from '../../../backend/controller/userService';
-
-userService.registerUser(form)
-  .then(data => {
-    console.log(data);
-    // Traitez la réponse du backend ici
-  })
-  .catch(error => {
-    console.error(error);
-    // Gérez les erreurs ici
-  });
 
 function Form() {
   const [form, setForm] = useState({
@@ -22,24 +11,6 @@ function Form() {
     confirmPassword: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      //const response = await fetch("http://localhost:3001/api/register", {
-        const response = await userService.registerUser(form);
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(form),
-      // });
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({
       ...form,
@@ -49,10 +20,7 @@ function Form() {
 
   return (
     <div className=" ">
-      <form
-        className=" flex flex-col  justify-centers items-center"
-        onSubmit={handleSubmit}
-      >
+      <form className=" flex flex-col  justify-centers items-center">
         <label className=" xl:my-5 text-white  my-5 ">
           Email:
           <br />
