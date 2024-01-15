@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const UserController = require('./controllers/UserController'); // ou le chemin correct vers ton contrôleur
-const connectDb = require('./dbConnexion');
+const UserController = require('./controller/UserController');
+const connectDb = require('./routes/dbConnexion');
 const app = express();
 const PORT = process.env.PORT || 3001;
 

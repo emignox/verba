@@ -27,7 +27,7 @@ const upload = multer({ storage: storage });
 // Endpoint pour le téléchargement de l'image
 app.post('/upload', upload.single('profilePicture'), async (req, res) => {
   try {
-    const imagePath = '/uploads/' + req.file.filename;
+    const imagePath = '/src/uploads/' + req.file.filename;
     const userId = req.user.id; // Assure-toi que tu récupères correctement l'ID de l'utilisateur
 
     // Mets à jour le chemin de l'image pour l'utilisateur dans la base de données
