@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DeleteButton, SaveButton } from './buttons';
+import {DeleteButton, SaveButton} from './buttons';
 import image from "../img/profil.jpg";
 
 const Settings: React.FC = () => {

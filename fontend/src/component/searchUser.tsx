@@ -1,5 +1,5 @@
 {/*Si InterfaceSearchUser n'est pas accesible, changer la majuscule de Interface ! Merci VScode */}
-import SearchUserProps from './interface/InterfaceSearchUser';
+import SearchUserProps from './interface/interfaceSearchUser';
 import ButtonAdd from './buttonAdd';
 
 function searchUser({ Image, Name}: SearchUserProps) {

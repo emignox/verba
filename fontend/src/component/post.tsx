@@ -1,12 +1,8 @@
-import { useState } from 'react';
 import PostProps from './interface/InterfacePost';
+import {LikeButton} from './buttons';
 
 function Post({ profileImage, profileName, message }: PostProps) {
-  const [likes, setLikes] = useState(0);
 
-  function handleLikeClick() {
-    setLikes(likes + 1);
-  }
 
   return (
     <>
@@ -21,11 +17,8 @@ function Post({ profileImage, profileName, message }: PostProps) {
           <p>{message}</p>
         </div>
         <div className="px-4 py-3 font-bold flex justify-between">
-          <button
-            onClick={handleLikeClick}
-          >
-            {likes} Like
-          </button>
+          {/* Utilisez le composant LikeButton ici */}
+          <LikeButton />
           <p className="font-bold">TIME</p>
         </div>
       </div>
