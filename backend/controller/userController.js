@@ -1,15 +1,14 @@
-// UserController.js
-const User = require('../models/User');
+const User = require('../models/user');
 const bcrypt = require('bcrypt');
-const UserController = {
 
+const UserController = {
   // Inscription d'un nouvel utilisateur
   registerUser: async (req, res) => {
     try {
-      const { nom, email, age, motDePasse, confirmPassword } = req.body;
+      const { email, name, year, country, password, confirmPassword } = req.body;
 
       // Vérifie si le mot de passe et la confirmation sont identiques
-      if (motDePasse !== confirmPassword) {
+      if (password !== confirmPassword) {
         return res.status(400).json({ message: 'Les mots de passe ne correspondent pas.' });
       }
 
@@ -22,10 +21,10 @@ const UserController = {
 
       // Hashage du mot de passe avant de sauvegarder l'utilisateur
       const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash(motDePasse, salt);
+      const hashedPassword = await bcrypt.hash(password, salt);
 
       // Crée un nouvel utilisateur
-      const newUser = new User({ nom, email, age, motDePasse: hashedPassword });
+      const newUser = new User({ email, name, year, country, password: hashedPassword });
 
       // Sauvegarde l'utilisateur dans la base de données
       await newUser.save();
