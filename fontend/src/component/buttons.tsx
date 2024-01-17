@@ -13,18 +13,23 @@ export const DeleteButton: React.FC = () => {
   };
 
   const handleDeleteClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); // Empêche la soumission du formulaire
+    e.preventDefault();
     openPopup();
   };
 
   return (
     <>
-      <button onClick={handleDeleteClick} className="bg-red-500 text-white p-2 rounded">Delete</button>
+      <button onClick={handleDeleteClick} className="border-2 border-red-500 text-red-500 px-5 py-2 hover:bg-gray-300 hover:text-black hover:border-transparent hover:scale-110 rounded">Delete</button>
       {isPopupOpen && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-4 rounded">
-            <p>Are you sure you want to delete?</p>
-            <button onClick={closePopup} className="bg-gray-300 text-black p-2 rounded mt-2">Cancel</button>
+          <div className="flex flex-col items-center bg-red-400 px-5 rounded">
+            <h1 className="text-white p-5">DELETE ACCOUNT</h1>
+            <p className="text-white">Do you want leave us ?</p>
+            <div className="flex flex-row justify-around p-5">
+              <button onClick={closePopup} className="bg-gray-300 text-black p-2 rounded-md m-3">No</button>
+              <button onClick={closePopup} className="bg-gray-300 text-blacj p-2 rounded-md m-3">Yes</button>
+            </div>
+            
           </div>
         </div>
       )}
