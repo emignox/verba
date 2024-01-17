@@ -6,7 +6,7 @@ function buttonAdd() {
     <div>
       {" "}
       <button
-        className="h-9 w-9  text-white text-center rounded-sm  xl:w-72"
+        className="h-9 w-9 text-white text-center rounded-sm transition-transform transform hover:scale-125"
         style={{ backgroundColor: "#5DA5B3" }}
       >
         {" "}
