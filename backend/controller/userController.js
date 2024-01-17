@@ -99,22 +99,35 @@ const UserController = {
   getFriends: async (req, res) => {
     try {
       const { userId } = req.params;
-
+      console.log("User ID ",userId);
       // Vérifie si l'utilisateur existe
       const user = await User.findById(userId);
-
+      console.log("user ",user);
       if (!user) {
         return res.status(404).json({ message: 'Utilisateur non trouvé.' });
       }
 
       // Récupère la liste des amis de l'utilisateur
-      const friends = await User.find({ _id: { $in: user.amis } });
+      const friends = await User.find({ _id: { $in: user.friends } });
 
       res.json(friends);
     } catch (error) {
       res.status(500).send(error.message);
     }
   },
+
+  getAll: async (req, res) =>{
+    try{
+      const users = await User.find({})
+
+      if (!users) {
+        return res.status(404).json({ message: 'No users founds' });
+      }
+      res.json(users);
+    }catch (error) {
+      res.status(500).send(error.message);
+    }
+  }
 };
 
 module.exports = UserController;

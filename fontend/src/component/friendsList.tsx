@@ -6,7 +6,7 @@ interface FriendsListProps {
 
 const FriendsList: React.FC<FriendsListProps> = ({ friends }) => {
     return (
-        <div className="flex flex-col w-1/5 rounded-xl p-3 my-3" style={{ backgroundColor: "#E0E2E8" }}>
+        <div className="flex flex-col fixed right-0 rounded-xl p-3 my-3 mx-5 h-full" style={{ backgroundColor: "#E0E2E8" }}>
             <h2 className="font-bold text-3xl text-center pb-4">FRIENDS</h2>
             <ul>
                 {friends.map((friend) => (
@@ -23,12 +23,10 @@ const FriendsList: React.FC<FriendsListProps> = ({ friends }) => {
                                 <button className="bg-slate-600 text-white px-2 mx-2 rounded-md">X</button>
                             </div>
                         </div>
-
                     </div>
                 ))}
             </ul>
         </div>
-
     );
 };
 
