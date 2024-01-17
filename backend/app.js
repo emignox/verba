@@ -16,6 +16,7 @@ app.post('/api/register', UserController.registerUser);
 app.post('/api/sendFriendRequest/:userId/:friendId', UserController.sendFriendRequest);
 app.post('/api/acceptFriendRequest/:userId/:friendId', UserController.acceptFriendRequest);
 app.get('/api/getFriends/:userId', UserController.getFriends);
+app.get('/api/getAllUsers', UserController.getAll);
 
 // Démarrage du serveur
 app.listen(PORT, () => {

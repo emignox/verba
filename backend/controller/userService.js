@@ -1,25 +1,27 @@
-const BASE_URL = 'http://localhost:3001/api';
+// NOT USE NEED TO BE DELETED
 
-const userService = {
-  registerUser: async (userData) => {
-    try {
-      const response = await fetch(`${BASE_URL}/signup`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-      });
+// const BASE_URL = 'http://localhost:3001/api';
 
-      if (!response.ok) {
-        throw new Error(`Erreur lors de l'inscription : ${response.statusText}`);
-      }
+// const userService = {
+//   registerUser: async (userData) => {
+//     try {
+//       const response = await fetch(`${BASE_URL}/signup`, {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(userData),
+//       });
 
-      return response.json();
-    } catch (error) {
-      throw new Error(`Erreur lors de l'inscription : ${error.message}`);
-    }
-  },
-};
+//       if (!response.ok) {
+//         throw new Error(`Erreur lors de l'inscription : ${response.statusText}`);
+//       }
 
-export default userService;
+//       return response.json();
+//     } catch (error) {
+//       throw new Error(`Erreur lors de l'inscription : ${error.message}`);
+//     }
+//   },
+// };
+
+// export default userService;
