@@ -7,7 +7,7 @@ import { faCog, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 function toggle() {
   return (
     <div
-      className="xl:flex xl:flex-col lg:w-1/5 lg:items-center   "
+      className="xl:fixed xl:flex xl:flex-col lg:w-1/5 lg:items-center top-20"
       style={{ backgroundColor: "transparent", height: "calc(100vh - 4rem)" }}
     >
       <div className=" ">

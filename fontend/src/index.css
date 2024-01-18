@@ -5,3 +5,12 @@
 body {
   background-color: #1c1c1f;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -6,7 +6,7 @@ function Post({ profileImage, profileName, message }: PostProps) {
 
   return (
     <>
-      <div className="flex flex-col w-1/2 rounded-lg p-3" style={{ backgroundColor: "#E0E2E8" }}>
+      <div className="flex flex-col w-1/2 rounded-lg p-3 my-5" style={{ backgroundColor: "#E0E2E8" }}>
         <div className="flex p-2">
             <img className="w-12 rounded-full" src={profileImage} alt={profileName} />
             <div className="flex-grow flex items-center">
