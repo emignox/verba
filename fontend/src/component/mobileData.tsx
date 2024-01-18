@@ -11,11 +11,13 @@ export const buttonsData = [
     icon: faHome,
     buttonClass: "w-14 rounded-md",
     iconClass: "text-white text-2xl",
+    link: "/",
   },
   {
     icon: faUsers,
     buttonClass: "",
     iconClass: "text-white text-xl",
+    link: "/friendsList",
   },
   {
     icon: faPlus,
@@ -26,5 +28,6 @@ export const buttonsData = [
     icon: faCog,
     buttonClass: "",
     iconClass: "lg:text-2xl lg:mx-2 text-white text-2xl",
+    link: "/settings",
   },
 ];
