@@ -6,8 +6,8 @@ function searchUser({ Image, Name}: SearchUserProps) {
 
   return (
     <>
-    <div className="flex justify-center my-3">
-      <div className="flex flex-row items-center justify-between lg:w-1/2 rounded-lg" style={{ backgroundColor: "#E0E2E8" }}>
+    <div className="flex my-3">
+      <div className="flex flex-row items-center justify-between rounded-lg" style={{ backgroundColor: "#E0E2E8" }}>
         <div className="flex p-2">
           <img className="w-12 rounded-full" src={Image} alt={Name} />
           <div className="flex-grow flex items-center">
